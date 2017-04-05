@@ -1,6 +1,5 @@
 pipeline:
   build:
     image: node:alpine
-    debug: true
     commands:
       - echo "console.log(\"hi\")" | node
