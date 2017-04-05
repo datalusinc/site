@@ -1,6 +1,5 @@
 pipeline:
-    build:
-        image: alexgian/alpine-build
-        commands:
-             - echo "HI"
-
+  build:
+    image: node:alpine
+    commands:
+      - echo "console.log(\"hi\")" | node
