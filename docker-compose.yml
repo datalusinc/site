@@ -1,6 +1,11 @@
-app:
-  image: nginx:alpine
-  volumes:
-    - ./app:/usr/share/nginx/html
-  ports:
-    - "80:80"
+nginx:
+    image: nginx:alpine
+    volumes:
+        - ./client:/usr/share/nginx/html
+    ports:
+        - "80:80"
+
+server:
+    build: ./server
+    ports:
+        - "8080:8080"
